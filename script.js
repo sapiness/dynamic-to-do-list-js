@@ -21,10 +21,12 @@ function addTask(){
 // task creation and removal{
 const list = document.createElement('li');
 list.textContent = taskText;
+let button = document.createElement("Remove");
+button.classList.add('remove-btn');
+button.onclick = taskList.removeChild(list);
 
 
-
-taskList.appendChild(list);
+taskList.appendChild(button);
 taskInput.value="";
 
 } 
@@ -35,6 +37,7 @@ taskInput.addEventListener('keypress',function(event){
  
     if (event.key == 'Enter')
         addTask();
+
 
 })
 
