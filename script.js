@@ -40,11 +40,7 @@ taskInput.addEventListener('keypress',function(event){
 
 }
 
-// Invoke the addTask function on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', addTask);
-
 // Loading Tasks from Local Storage:
-
 function loadTasks() {
     const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
     storedTasks.forEach(taskText => addTask(taskText, false)); // 'false' indicates not to save again to Local Storage
@@ -60,10 +56,16 @@ function addTask(taskText, save = true) {
         localStorage.setItem('tasks', JSON.stringify(storedTasks));
     }
 }
-
 document.addEventListener('DOMContentLoaded', () => {
     loadTasks();
     // Other initialization code
 });
 
+// Invoke the addTask function on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', addTask);
+
+
+
 })
+
+
