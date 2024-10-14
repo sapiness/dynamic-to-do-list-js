@@ -19,12 +19,11 @@ function addTask(){
 
 } else{
 // task creation and removal{
-const list = document.createElement('li');
-list.textContent = taskText;
+const btn = document.createElement('li');
+btn.textContent = taskText;
 let button = document.createElement("Remove");
-button.classList.add('remove-btn');
-button.onclick = taskList.removeChild(list);
-
+button.classList.add("remove-btn");
+button.onclick = taskList.removeChild(btn);
 
 taskList.appendChild(button);
 taskInput.value="";
