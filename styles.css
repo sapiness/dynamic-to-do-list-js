@@ -4,7 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width:100%;
     margin: 0;
    background-image: url("list1.jpg");
     background-repeat: no-repeat;
@@ -13,7 +14,7 @@ body {
 #todo-app {
     width: 100%;
     max-width: 400px;
-    background-color: rgb(255 255 255 /85%);
+    background-color: rgb(255 255 255 /80%);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
